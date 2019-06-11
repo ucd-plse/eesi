@@ -1,0 +1,5 @@
+WARNING: EMPTY ERROR-ONLY SET!
+
+real	0m37.608s
+user	0m0.032s
+sys	0m0.020s

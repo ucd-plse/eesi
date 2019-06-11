@@ -1,0 +1,7 @@
+__slab_alloc ==0
+__bread_gfp ==0
+sync_inode_metadata <0
+__kmalloc ==0
+kmem_cache_alloc ==0
+__ext4_inode_loc <0
+jbd2_journal_dirty_metadata <0

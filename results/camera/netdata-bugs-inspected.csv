@@ -1,0 +1,68 @@
+Confirmed bugs,35,,repo,https://github.com/netdata/netdata
+Potential bugs,0,,commit,4f493d6da2159479cfbdd8e89d2bd03f485a02cc
+Not problematic,15,,NOTE,Filtered out config/rrd functions before inspection because of large number of reports
+Unknown,0,,,
+FP total,8,,,
+FP Removable,0,,,
+FP Not Removable,0,,,
+Total,58,,,
+,,,,
+Call Site,Callee,Unchecked,Checked,Classification
+appconfig.c:108,avl_search,1,21,FP
+main.c:462,malloc,1,14,confirmed
+appconfig.c:400,config_set,1,10,FP
+rrd2json.c:227,rrd_stats_one_json,1,1,FP
+appconfig.c:246,config_value_create,2,1,FP
+appconfig.c:381,config_value_create,2,1,FP
+appconfig.c:130,pthread_rwlock_wrlock,19,0,confirmed
+appconfig.c:155,pthread_rwlock_init,5,0,confirmed
+appconfig.c:162,pthread_rwlock_wrlock,19,0,confirmed
+appconfig.c:212,config_create,3,0,FP
+appconfig.c:272,config_create,3,0,FP
+appconfig.c:378,config_create,3,0,FP
+appconfig.c:441,pthread_rwlock_wrlock,19,0,confirmed
+appconfig.c:452,pthread_rwlock_wrlock,19,0,confirmed
+appconfig.c:471,pthread_rwlock_wrlock,19,0,confirmed
+avl.c:150,pthread_rwlock_wrlock,19,0,confirmed
+avl.c:248,pthread_rwlock_wrlock,19,0,confirmed
+avl.c:304,pthread_rwlock_wrlock,19,0,confirmed
+avl.c:368,pthread_rwlock_wrlock,19,0,confirmed
+avl.c:396,pthread_rwlock_init,5,0,confirmed
+dictionary.c:101,pthread_rwlock_init,5,0,confirmed
+dictionary.c:109,pthread_rwlock_wrlock,19,0,confirmed
+dictionary.c:121,pthread_rwlock_rdlock,9,0,confirmed
+dictionary.c:135,pthread_rwlock_wrlock,19,0,confirmed
+dictionary.c:150,pthread_rwlock_rdlock,9,0,confirmed
+dictionary.c:57,pthread_rwlock_wrlock,19,0,confirmed
+dictionary.c:71,pthread_rwlock_wrlock,19,0,confirmed
+global_statistics.c:13,pthread_mutex_lock,1,0,confirmed
+global_statistics.c:17,pthread_mutex_unlock,1,0,confirmed
+plugin_proc.c:102,do_sys_kernel_mm_ksm,1,0,not problematic
+plugin_proc.c:110,do_proc_loadavg,1,0,not problematic
+plugin_proc.c:118,do_proc_interrupts,1,0,not problematic
+plugin_proc.c:126,do_proc_softirqs,1,0,not problematic
+plugin_proc.c:134,do_proc_sys_kernel_random_entropy_avail,1,0,not problematic
+plugin_proc.c:142,do_proc_net_dev,1,0,not problematic
+plugin_proc.c:150,do_proc_diskstats,1,0,not problematic
+plugin_proc.c:158,do_proc_net_snmp,1,0,not problematic
+plugin_proc.c:166,do_proc_net_netstat,1,0,not problematic
+plugin_proc.c:174,do_proc_net_stat_conntrack,1,0,not problematic
+plugin_proc.c:182,do_proc_net_ip_vs_stats,1,0,not problematic
+plugin_proc.c:190,do_proc_stat,1,0,not problematic
+plugin_proc.c:198,do_proc_meminfo,1,0,not problematic
+plugin_proc.c:206,do_proc_vmstat,1,0,not problematic
+plugin_proc.c:214,do_proc_net_rpc_nfsd,1,0,not problematic
+plugin_tc.c:352,pthread_rwlock_init,5,0,confirmed
+rrd2json.c:1121,pthread_rwlock_rdlock,9,0,confirmed
+rrd2json.c:119,pthread_rwlock_rdlock,9,0,confirmed
+rrd2json.c:1692,pthread_rwlock_rdlock,9,0,confirmed
+rrd2json.c:18,pthread_rwlock_rdlock,9,0,confirmed
+rrd2json.c:239,pthread_rwlock_rdlock,9,0,confirmed
+rrd2json.c:98,pthread_rwlock_rdlock,9,0,confirmed
+rrd.c:1297,pthread_rwlock_wrlock,19,0,confirmed
+rrd.c:458,pthread_rwlock_init,5,0,confirmed
+rrd.c:459,pthread_rwlock_wrlock,19,0,confirmed
+rrd.c:587,pthread_rwlock_wrlock,19,0,confirmed
+rrd.c:688,pthread_rwlock_wrlock,19,0,confirmed
+rrd.c:690,pthread_rwlock_wrlock,19,0,confirmed
+rrd.c:843,pthread_rwlock_rdlock,9,0,confirmed

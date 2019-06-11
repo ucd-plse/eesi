@@ -1,0 +1,2 @@
+mustcheck: mustcheck ==0
+foo: foo <0

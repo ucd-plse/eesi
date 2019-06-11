@@ -1,0 +1,1 @@
+test26-struct-arg/test.c:9 mustcheck 1 1

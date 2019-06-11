@@ -1,0 +1,2 @@
+calloc ==0
+xcalloc ==0

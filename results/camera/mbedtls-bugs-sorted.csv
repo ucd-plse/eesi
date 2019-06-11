@@ -1,0 +1,6 @@
+rsa_internal.c:137,mbedtls_mpi_lset,1,40
+ecp.c:2836,mbedtls_ecp_group_copy,1,1
+ecp_curves.c:1063,fix_negative,3,0
+ecp_curves.c:1100,fix_negative,3,0
+ecp_curves.c:1149,fix_negative,3,0
+ssl_srv.c:3323,ssl_get_ecdh_params_from_cert.192,1,0

@@ -1,0 +1,44 @@
+FROM ubuntu:xenial as dev
+
+# defreez/eesi:dev
+
+LABEL MAINTAINER="dcdefreez@ucdavis.edu"
+
+RUN apt-get update -y \
+    && apt-get install -y wget \
+    && echo "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-7 main" > /etc/apt/sources.list.d/llvm-7.list \
+    && wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - \
+    && apt-get update -y \
+    && apt-get install -y \
+	build-essential \
+	vim-nox \
+	llvm-7 \
+	llvm-7-dev \
+	clang-7 \
+	wget \
+	curl \
+	git \
+	autoconf \
+	cmake \
+	zlib1g-dev \
+	libedit-dev \
+	libboost-program-options-dev \
+	python-pip \
+	graphviz \
+	libsqlite3-dev \
+	time \
+	unzip \
+	valgrind \
+        locales \
+	libgoogle-glog-dev \
+    && echo 'export LD_LIBRARY_PATH="/usr/local/lib"' >> /root/.bashrc \
+    && pip install enum34 pandas awscli
+
+# Set the locale
+RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
+    locale-gen
+ENV LANG en_US.UTF-8  
+ENV LANGUAGE en_US:en  
+ENV LC_ALL en_US.UTF-8 
+
+ENTRYPOINT ["/bin/bash"]

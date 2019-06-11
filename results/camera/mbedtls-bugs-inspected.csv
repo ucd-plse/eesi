@@ -1,0 +1,16 @@
+Confirmed bugs,1,,repo,https://github.com/ARMmbed/mbedtls
+Potential bugs,0,,commit,f352f75f6bd5734c8f671323dd6ab32472d5da34
+Not problematic,1,,,
+Unknown,0,,,
+FP total,4,,,
+FP Removable,0,,,
+FP Not Removable,0,,,
+Total,6,,,
+,,,,
+Call Site,Callee,Unchecked,Checked,Classification
+rsa_internal.c:137,mbedtls_mpi_lset,1,40,confirmed
+ecp.c:2836,mbedtls_ecp_group_copy,1,1,not problematic
+ecp_curves.c:1063,fix_negative,3,0,FP
+ecp_curves.c:1100,fix_negative,3,0,FP
+ecp_curves.c:1149,fix_negative,3,0,FP
+ssl_srv.c:3323,ssl_get_ecdh_params_from_cert.192,1,0,FP

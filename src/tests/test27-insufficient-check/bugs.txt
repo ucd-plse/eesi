@@ -1,0 +1,1 @@
+test27-insufficient-check/test.c:4 mustcheck 1 0

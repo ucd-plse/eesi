@@ -1,0 +1,28 @@
+Confirmed bugs,0,,zlib release 1.2.1,
+Potential bugs,4,,,
+Not problematic,8,,,
+Unknown,0,,,
+FP total,6,,,
+FP Removable,0,,,
+FP Not Removable,0,,,
+Total,18,,,
+,,,,
+Call Site,Callee,Unchecked,Checked,Classification
+gzwrite.c:580,gz_comp,1,8,not problematic
+gzread.c:620,gz_look,1,1,not problematic
+gzwrite.c:137,deflateReset,1,1,potential
+gzread.c:141,inflateReset,2,1,potential
+inflate.c:1437,inflateReset,2,1,potential
+gzwrite.c:270,gz_write,3,1,FP
+gzwrite.c:300,gz_write,3,1,FP
+gzwrite.c:371,gz_write,3,1,FP
+compress.c:62,deflateEnd,4,0,not problematic
+deflate.c:1136,deflateEnd,4,0,not problematic
+deflate.c:337,deflateEnd,4,0,not problematic
+gzread.c:400,gz_read,3,0,FP
+gzread.c:438,gz_read,3,0,FP
+gzread.c:472,gz_read,3,0,FP
+gzread.c:644,inflateEnd,2,0,not problematic
+gzwrite.c:619,deflateParams,1,0,potential
+gzwrite.c:654,deflateEnd,4,0,not problematic
+uncompr.c:79,inflateEnd,2,0,not problematic

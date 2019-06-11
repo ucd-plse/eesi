@@ -1,0 +1,54 @@
+Confirmed bugs,31,,repo,https://github.com/otrv4/pidgin-otrng
+Potential bugs,7,,commit,90ee65901337b52f2185fb667d371112e8f71b0e
+Not problematic,0,,,
+Unknown,0,,,
+FP total,5,,,
+FP Removable,0,,,
+FP Not Removable,0,,,
+Total,43,,,
+,,,,
+Call Site,Callee,Unchecked,Checked,Classification
+plugin-all.c:1379,client_conversation_to_plugin_conversation,3,4,potential
+plugin-all.c:1395,client_conversation_to_plugin_conversation,3,4,potential
+plugin-all.c:1408,client_conversation_to_plugin_conversation,3,4,confirmed
+gtk-dialog.c:1384,malloc,23,15,confirmed
+gtk-dialog.c:1467,malloc,23,15,confirmed
+gtk-dialog.c:182,malloc,23,15,confirmed
+gtk-dialog.c:2397,malloc,23,15,confirmed
+gtk-dialog.c:2926,malloc,23,15,confirmed
+gtk-dialog.c:3154,malloc,23,15,confirmed
+gtk-dialog.c:3272,malloc,23,15,confirmed
+gtk-dialog.c:767,malloc,23,15,confirmed
+gtk-dialog.c:793,malloc,23,15,confirmed
+gtk-ui.c:170,malloc,23,15,confirmed
+gtk-ui.c:230,malloc,23,15,confirmed
+gtk-ui.c:299,malloc,23,15,confirmed
+gtk-ui.c:550,malloc,23,15,confirmed
+plugin-all.c:1296,malloc,23,15,confirmed
+plugin-all.c:639,malloc,23,15,confirmed
+prekey-discovery-jabber.c:122,malloc,23,15,confirmed
+prekey-discovery-jabber.c:154,malloc,23,15,confirmed
+prekey-discovery-jabber.c:189,malloc,23,15,confirmed
+prekey-discovery-jabber.c:256,malloc,23,15,confirmed
+prekey-discovery-jabber.c:48,malloc,23,15,potential
+prekey-discovery-jabber.c:62,malloc,23,15,confirmed
+gtk-dialog.c:1844,purple_conversation_to_plugin_conversation,9,1,potential
+gtk-dialog.c:1968,purple_conversation_to_plugin_conversation,9,1,FP
+gtk-dialog.c:2356,purple_conversation_to_plugin_conversation,9,1,potential
+gtk-dialog.c:2569,purple_conversation_to_plugin_conversation,9,1,confirmed
+gtk-dialog.c:2938,purple_conversation_to_plugin_conversation,9,1,confirmed
+gtk-dialog.c:3078,purple_conversation_to_plugin_conversation,9,1,FP
+gtk-dialog.c:3258,purple_conversation_to_plugin_conversation,9,1,FP
+gtk-dialog.c:3352,purple_conversation_to_plugin_conversation,9,1,potential
+gtk-dialog.c:1166,otrng_plugin_conversation_copy,2,0,potential
+gtk-dialog.c:142,g_malloc,17,0,confirmed
+gtk-dialog.c:2579,get_context_instance_to_index,2,0,FP
+gtk-dialog.c:2580,get_context_instance_to_index,2,0,FP
+gtk-dialog.c:3111,g_malloc,17,0,confirmed
+gtk-dialog.c:3115,g_malloc,17,0,confirmed
+gtk-dialog.c:3120,g_malloc,17,0,confirmed
+gtk-dialog.c:3125,g_malloc,17,0,confirmed
+gtk-dialog.c:959,otrng_plugin_conversation_copy,2,0,confirmed
+"plugin-all.c:1038
+",g_malloc,17,0,confirmed
+plugin-all.c:1043,g_malloc,17,0,confirmed

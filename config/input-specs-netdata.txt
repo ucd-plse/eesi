@@ -1,0 +1,16 @@
+malloc ==0
+calloc ==0
+realloc ==0
+pthread_mutex_init <0
+pthread_rwlock_init <0
+pthread_rwlock_wrlock <0
+pthread_setcancelstate <0
+pthread_mutex_lock <0
+pthread_mutex_trylock <0
+pthread_mutex_unlock <0
+pthread_rwlock_destroy <0
+pthread_rwlock_init <0
+pthread_rwlock_rdlock <0
+pthread_rwlock_wrlock <0
+pthread_rwlock_tryrdlock <0
+pthread_rwlock_trywrlock <0

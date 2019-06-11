@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - cd src
+      - mkdir build
+      - cd build
+      - cmake ..
+      - make -j$(nproc)
+      - cd ../..
+      - src/scripts/tabledata.sh specs artifact small local
+      - src/scripts/tabledata.sh bugs artifact small local
+      - src/scripts/shacompare.sh results/artifact/pidgin-otrng-specs.txt results/camera/pidgin-otrng-specs.txt
+      - src/scripts/shacompare.sh results/artifact/pidgin-otrng-bugs.txt results/camera/pidgin-otrng-bugs.txt
+      - src/scripts/shacompare.sh results/artifact/openssl-specs.txt results/camera/openssl-specs.txt
+      - src/scripts/shacompare.sh results/artifact/openssl-bugs.txt results/camera/openssl-bugs.txt
+      - src/scripts/shacompare.sh results/artifact/mbedtls-specs.txt results/camera/mbedtls-specs.txt
+      - src/scripts/shacompare.sh results/artifact/mbedtls-bugs.txt results/camera/mbedtls-bugs.txt
+      - src/scripts/shacompare.sh results/artifact/netdata-specs.txt results/camera/netdata-specs.txt
+      - src/scripts/shacompare.sh results/artifact/netdata-bugs.txt results/camera/netdata-bugs.txt
+      - src/scripts/shacompare.sh results/artifact/linux-nfc-specs.txt results/camera/linux-nfc-specs.txt
+      - src/scripts/shacompare.sh results/artifact/linux-nfc-bugs.txt results/camera/linux-nfc-bugs.txt
+      - src/scripts/shacompare.sh results/artifact/littlefs-specs.txt results/camera/littlefs-specs.txt
+      - src/scripts/shacompare.sh results/artifact/littlefs-bugs.txt results/camera/littlefs-bugs.txt
+      - src/scripts/shacompare.sh results/artifact/zlib-specs.txt results/camera/zlib-specs.txt
+      - src/scripts/shacompare.sh results/artifact/zlib-bugs.txt results/camera/zlib-bugs.txt
+      - src/scripts/confirmedbugs.sh
