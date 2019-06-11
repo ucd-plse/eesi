@@ -1,0 +1,1 @@
+test23-missingcheck/test.c:4 mustcheck 1 0

@@ -1,0 +1,1 @@
+test7-fields/test.c:18 mustcheck 1 1

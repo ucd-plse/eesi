@@ -1,0 +1,11 @@
+ext4_error
+__ext4_error
+ext4_error_inode
+__ext4_error_inode
+ext4_error_file
+ext4_abort
+__ext4_abort
+ext4_grp_locked_error
+ext2_error
+ext2_clear_super_error
+btrfs_err

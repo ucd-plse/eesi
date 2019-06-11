@@ -1,0 +1,12 @@
+*.aux
+*.bbl
+*.blg
+*.log
+*.pdf
+.#*
+*.ll
+*.swp
+src/**/*.bc
+**/*.ipch
+**/*.bin
+data

@@ -1,0 +1,3 @@
+main: main bottom
+bar: bar <0
+mustcheck: mustcheck <0

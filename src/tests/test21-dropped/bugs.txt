@@ -1,0 +1,1 @@
+test21-dropped/test.c:4 mustcheck 1 0

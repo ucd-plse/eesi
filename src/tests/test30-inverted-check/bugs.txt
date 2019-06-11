@@ -1,0 +1,1 @@
+test30-inverted-check/test.c:8 mustcheck !=0 mustcheck ==0
