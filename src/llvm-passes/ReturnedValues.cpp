@@ -2,7 +2,6 @@
 #include <string>
 
 #include "Common.h"
-#include "ReturnConstraints.h"
 #include "ReturnedValues.h"
 #include "llvm/IR/CFG.h"
 
@@ -291,7 +290,6 @@ ReturnedValuesFact ReturnedValues::getOutFact(Value *v) const {
 }
 
 void ReturnedValues::getAnalysisUsage(AnalysisUsage &AU) const {
-  AU.addRequired<ReturnConstraints>();
   AU.setPreservesAll();
 }
 
