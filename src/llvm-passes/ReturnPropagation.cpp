@@ -152,19 +152,6 @@ void ReturnPropagation::visitLoadInst(
   if (in->value.find(load_from) != in->value.end()) {
     out->value[&I] = in->value.at(load_from);
   }
-
-  // if (use_alias) {
-  //   // Load from load_from and everything it may alias
-  //   AAMDNodes AAInfo;
-  //   AliasSet &AS = Tracker->getAliasSetForPointer(
-  //       load_from, AliasAnalysis::UnknownSize, AAInfo);
-  //   for (auto &PR : AS) {
-  //     Value *alias_load_from = PR.getValue();
-  //     if (in->value.find(alias_load_from) != in->value.end()) {
-  //       out->value[&I] = in->value.at(alias_load_from);
-  //     }
-  //   }
-  // }
 }
 
 // Copy the return facts into a new value

@@ -128,9 +128,6 @@ public:
   static char ID;
 
   ReturnPropagationPointer() : llvm::ModulePass(ID) {}
-  ReturnPropagationPointer(bool use_alias)
-      : llvm::ModulePass(ID) {}
-
 
   bool runOnModule(llvm::Module &M);
   bool runOnFunction(llvm::Function &F);

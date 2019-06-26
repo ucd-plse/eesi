@@ -54,8 +54,6 @@ struct ReturnPropagation : public llvm::ModulePass {
   static char ID;
 
   ReturnPropagation() : llvm::ModulePass(ID) {}
-  ReturnPropagation(bool use_alias)
-      : llvm::ModulePass(ID) {}
 
   // Dataflow facts at the program point immediately following instruction
   std::unordered_map<llvm::Value *, std::shared_ptr<ReturnPropagationFact>>
