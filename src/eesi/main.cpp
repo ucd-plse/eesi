@@ -49,6 +49,14 @@ int main(int argc, char **argv) {
   po::variables_map varmap;
   try {
     po::store(po::parse_command_line(argc, argv, desc), varmap);
+
+    // Deal with --help before notify to avoid error
+    // about missing required arguments
+    if (varmap.count("help")) {
+      std::cout << desc << "\n";
+      return 0;
+    }
+
     po::notify(varmap);
   } catch (po::error &e) {
     cerr << "ERROR: " << e.what() << endl << endl;
