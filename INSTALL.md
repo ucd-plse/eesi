@@ -216,7 +216,7 @@ run correctly.
 ## Input Data
 
 The input data used for the paper is available at 
-https://eesi.defreez.com/data.tgz.
+https://eesi-data.s3-us-west-2.amazonaws.com/data.tgz.
 This tarball needs to be unpacked to create the directory `data` in the 
 root of this repoistory.
 
